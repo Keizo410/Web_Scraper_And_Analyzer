@@ -1,0 +1,11 @@
+asyncio
+selenium
+pandas
+bert-extractive-summarizer
+spacy
+regex
+sentencepiece
+transformers
+torch
+summarizer
+chromedriver_binary
