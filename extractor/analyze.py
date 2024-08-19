@@ -38,7 +38,6 @@ class Analyzer:
             print("Error at summarize: ", e)
             pass
     
-    
     def word_count(self):
         try: 
             pos_tag = ['PROPN', 'ADJ', 'NOUN', 'VERB']

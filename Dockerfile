@@ -20,3 +20,4 @@ ENV PYTHONUNBUFFERED=1
 
 # Run main.py when the container launches
 CMD ["python", "main.py"]
+

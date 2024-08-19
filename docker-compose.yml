@@ -1,0 +1,27 @@
+version: '3.8'
+
+networks:
+  web:
+    driver: bridge
+
+services:
+  chrome:
+    image: selenium/standalone-chrome:latest
+    hostname: chrome
+    networks:
+      - web
+    privileged: true
+    shm_size: 2g
+    ports:
+      - "4444:4444"
+
+  framework:
+    build: .
+    networks:
+      - web
+    depends_on: 
+      - chrome
+    environment:
+      - SELENIUM_HOST=chrome
+      - SELENIUM_PORT=4444
+    command: ["python", "main.py"]
