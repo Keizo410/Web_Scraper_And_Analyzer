@@ -2,6 +2,7 @@ from aifc import Error
 import pandas as pd
 import string
 import re
+import os 
 
 class Cleaner: 
     def __init__(self) -> None:
@@ -34,13 +35,25 @@ class Cleaner:
             dataframe (pandas.DataFrame): The DataFrame to save.
             filename (str): The name of the output file.
         """
+        output_dir = "/output/"
+        if not os.path.exists(output_dir):
+            os.makedirs(output_dir)
 
+        file_path = os.path.join(output_dir, filename)
+        
         try:
-            with open(filename, 'w') as file:
+            with open(file_path, 'w') as file:
                 file.write(dataframe.to_string())
-            print(f"DataFrame saved to {filename}")
+            print(f"DataFrame saved to {file_path}")
         except IOError as e:
             print(f"Error saving data to file: {e}")
+
+        # try:
+        #     with open(filename, 'w') as file:
+        #         file.write(dataframe.to_string())
+        #     print(f"DataFrame saved to {filename}")
+        # except IOError as e:
+        #     print(f"Error saving data to file: {e}")
 
     def convert_lower(self, x):
         try:

@@ -24,4 +24,6 @@ services:
     environment:
       - SELENIUM_HOST=chrome
       - SELENIUM_PORT=4444
+    volumes:
+      - ./output:/output/  # Maps the host's ./output directory to /output in the container
     command: ["python", "main.py"]
