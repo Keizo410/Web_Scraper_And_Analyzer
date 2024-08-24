@@ -1,3 +1,14 @@
 Medium artical for reference : https://medium.com/@Olohireme/job-skills-extraction-from-data-science-job-posts-38fd58b94675
 Summerization: https://medium.com/analytics-vidhya/text-summarization-using-spacy-ca4867c6b744
 possible LinkedIn scraping add: https://www.scraperapi.com/blog/linkedin-scraper-python/
+
+
+Criteria:
+1. location trends
+2. remote, hybrid, in person trends
+3. skill requirements
+4. experience requirements
+5. responsibility analysis
+6. salary analysis
+7. post frequencies analysis
+8. education requirements
